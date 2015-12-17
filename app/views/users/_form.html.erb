@@ -1,0 +1,93 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :projectrepo %><br>
+    <%= f.text_field :projectrepo %>
+  </div>
+  <div class="field">
+    <%= f.label :projecturl %><br>
+    <%= f.text_field :projecturl %>
+  </div>
+  <div class="field">
+    <%= f.label :oopprac %><br>
+    <%= f.number_field :oopprac %>
+  </div>
+  <div class="field">
+    <%= f.label :moddev %><br>
+    <%= f.number_field :moddev %>
+  </div>
+  <div class="field">
+    <%= f.label :fullstack %><br>
+    <%= f.number_field :fullstack %>
+  </div>
+  <div class="field">
+    <%= f.label :testing %><br>
+    <%= f.number_field :testing %>
+  </div>
+  <div class="field">
+    <%= f.label :dbknow %><br>
+    <%= f.number_field :dbknow %>
+  </div>
+  <div class="field">
+    <%= f.label :debug %><br>
+    <%= f.number_field :debug %>
+  </div>
+  <div class="field">
+    <%= f.label :problems %><br>
+    <%= f.number_field :problems %>
+  </div>
+  <div class="field">
+    <%= f.label :js %><br>
+    <%= f.number_field :js %>
+  </div>
+  <div class="field">
+    <%= f.label :html %><br>
+    <%= f.number_field :html %>
+  </div>
+  <div class="field">
+    <%= f.label :css %><br>
+    <%= f.number_field :css %>
+  </div>
+  <div class="field">
+    <%= f.label :teamwork %><br>
+    <%= f.number_field :teamwork %>
+  </div>
+  <div class="field">
+    <%= f.label :motivation %><br>
+    <%= f.number_field :motivation %>
+  </div>
+  <div class="field">
+    <%= f.label :communication %><br>
+    <%= f.number_field :communication %>
+  </div>
+  <div class="field">
+    <%= f.label :energy %><br>
+    <%= f.number_field :energy %>
+  </div>
+  <div class="field">
+    <%= f.label :intelligence %><br>
+    <%= f.number_field :intelligence %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

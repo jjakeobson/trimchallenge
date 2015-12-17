@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Projectrepo</th>
+      <th>Projecturl</th>
+      <th>Oopprac</th>
+      <th>Moddev</th>
+      <th>Fullstack</th>
+      <th>Testing</th>
+      <th>Dbknow</th>
+      <th>Debug</th>
+      <th>Problems</th>
+      <th>Js</th>
+      <th>Html</th>
+      <th>Css</th>
+      <th>Teamwork</th>
+      <th>Motivation</th>
+      <th>Communication</th>
+      <th>Energy</th>
+      <th>Intelligence</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= user.name %></td>
+        <td><%= user.email %></td>
+        <td><%= user.projectrepo %></td>
+        <td><%= user.projecturl %></td>
+        <td><%= user.oopprac %></td>
+        <td><%= user.moddev %></td>
+        <td><%= user.fullstack %></td>
+        <td><%= user.testing %></td>
+        <td><%= user.dbknow %></td>
+        <td><%= user.debug %></td>
+        <td><%= user.problems %></td>
+        <td><%= user.js %></td>
+        <td><%= user.html %></td>
+        <td><%= user.css %></td>
+        <td><%= user.teamwork %></td>
+        <td><%= user.motivation %></td>
+        <td><%= user.communication %></td>
+        <td><%= user.energy %></td>
+        <td><%= user.intelligence %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
