@@ -1,0 +1,150 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+
+ @font-face {
+     font-family: 'museo_sans500';
+     src: font-url('MuseoSans_500-webfont.eot');
+     src: font-url('MuseoSans_500-webfont.eot?#iefix') format('embedded-opentype'),
+          font-url('MuseoSans_500-webfont.woff2') format('woff2'),
+          font-url('MuseoSans_500-webfont.woff') format('woff'),
+          font-url('MuseoSans_500-webfont.ttf') format('truetype'),
+          font-url('MuseoSans_500-webfont.svg#museo_sans500') format('svg');
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ body {
+   background-color: #114B5f;
+   color: #333;
+   font-family: 'museo_sans500', Arial;
+   font-size: 18px;
+   line-height: 18px;
+   letter-spacing: 5px;
+ }
+
+ #form-container {
+   padding: 40px 40px 40px 40px;
+   background-color: #456990;
+   margin: 60px 0 60px 0;
+ }
+
+ #show-container {
+   padding: 10px 40px 40px 40px;
+   background-color: #456990;
+   margin: 60px 0 60px 0;
+ }
+
+ .form-control {
+   min-height: 50px;
+   margin-bottom: 30px;
+   background-color: #E4FDE1;
+   border-radius: 0;
+   -webkit-appearance: none;
+
+   &::-webkit-input-placeholder {
+     color: #456990;
+     letter-spacing: 5px;
+     font-size: 18px;
+   }
+   &::-moz-placeholder {
+     color: #456990;
+     letter-spacing: 5px;
+     font-size: 18px;
+   }
+   &:-ms-input-placeholder {
+     color: #456990;
+     letter-spacing: 5px;
+     font-size: 18px;
+   }
+ }
+
+ .form-label {
+   min-height: 50px;
+
+   label {
+     color: #E4FDE1;
+     font-weight: normal;
+     line-height: 50px;
+   }
+ }
+
+ input[type=text], input[type=email], input[type=number] {
+   font-size: 18px;
+   color: #456990;
+   letter-spacing: 2px;
+   -webkit-transition: all 0.30s ease-in-out;
+   &:focus {
+     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+     border: 1px solid rgba(81, 203, 238, 1);
+
+   }
+ }
+
+ input[type=number] {
+   &::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     cursor:pointer;
+     display:block;
+     width:8px;
+     text-align:center;
+     position:relative;
+   }
+   &:hover::-webkit-inner-spin-button {
+       background: #E4FDE1 asset-url("up9.png") no-repeat 50% 50%;
+       width: 14px;
+       height: 14px;
+       padding: 10px;
+   }
+ }
+
+ .actions {
+   min-height: 50px;
+
+   .btn-primary {
+     width: 100%;
+     height: 50px;
+     color: #E4FDE1;
+     font-weight: normal;
+     font-size: 18px;
+     letter-spacing: inherit;
+     background-color: #F45b69;
+     border-radius: 0;
+   }
+ }
+
+ a {
+   color: #F7EF99;
+
+   &:hover {
+     color: #B7CE63;
+     text-decoration: none;
+   }
+ }
+
+ .toolbar {
+   margin-bottom: 12px;
+ }
+
+ #notice {
+   text-align: center;
+   font-size: 18px;
+   background-color: #058C42;
+   padding: 10px 0 10px 0;
+   color: #E4FDE1;
+ }
