@@ -1,12 +1,217 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <meta charset="utf-8">
+    <title>Trim user</title>
+    <style media="screen">
+      body {
+        background-color: #114B5f;
+        color: #E4FDE1;
+        font-family: 'museo_sans500', Arial, sans-serif;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: 5px;
+      }
+      #field-container {
+        padding: 40px;
+        background-color: #456990;
+        margin: 15px 0 30px 0;
+      }
+      .email-field {
+        margin-bottom: 10px;
+      }
+      p {
+        margin-left: 10px;
+      }
+      table {
+        padding: 10px;
+      }
+      th, td {
+        padding: 4px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hi <%= @user.name %></h1>
     <p>
-      Sample mail sent using smtp.
+      Greetings, Tim!
     </p>
+    <div class="container">
+      <div id="field-container">
+        <h1>Trim usership:</h1>
+        <h1>Code Challenge</h1>
+
+        <table id="user-info">
+          <tr>
+            <th>
+            </th>
+            <th>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              NAME:
+            </td>
+            <td>
+              <%= @user.name %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              EMAIL:
+            </td>
+            <td>
+              <%= @user.email %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              PROJECT REPO:
+            </td>
+            <td>
+              <%= @user.repo_url %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              PROJECT URL:
+            </td>
+            <td>
+              <%= @user.project_url %>
+            </td>
+          </tr>
+        </table>
+
+        <table id="user-attributes">
+          <tr>
+            <th>
+            </th>
+            <th>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              USING BEST PRACTICES FOR OOP:
+            </td>
+            <td>
+               <%= @user.oop %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              MODULAR DEVELOPMENT:
+            </td>
+            <td>
+              <%= @user.mod_dev %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              FULL STACK WORKFLOW UNDERSTANDING:
+            </td>
+            <td>
+              <%= @user.full_stack %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              TESTING:
+            </td>
+            <td>
+              <%= @user.testing %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              DATABASE KNOWLEDGE:
+            </td>
+            <td>
+              <%= @user.database %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              DEBUGGING:
+            </td>
+            <td>
+              <%= @user.debugging %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              PROBLEM SOLVING SKILLS:
+            </td>
+            <td>
+              <%= @user.problem_solving %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              JAVASCRIPT:
+            </td>
+            <td>
+              <%= @user.javascript %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              HTML:
+            </td>
+            <td>
+              <%= @user.html %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              CSS:
+            </td>
+            <td>
+              <%= @user.css %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              WORKING ON A TEAM:s
+            </td>
+            <td>
+              <%= @user.team %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              SELF MOTIVATION:
+            </td>
+            <td>
+              <%= @user.self_motivation %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              COMMUNICATION SKILLS:
+            </td>
+            <td>
+              <%= @user.communication %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              YOUR OWN ENERGY LEVEL:
+            </td>
+            <td>
+              <%= @user.energy_level %>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              INTELLIGENCE:
+            </td>
+            <td>
+              <%= @user.intelligence %>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+
   </body>
 </html>

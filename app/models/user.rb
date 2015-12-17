@@ -1,2 +1,21 @@
 class User < ActiveRecord::Base
+  validates :name, presence: true
+  validates :email, presence: true
+  validates :projectrepo, presence: true
+  validates :projecturl, presence: true
+  validates :oopprac, presence: true
+  validates :moddev, presence: true
+  validates :fullstack, presence: true
+  validates :testing, presence: true
+  validates :dbknow, presence: true
+  validates :debug, presence: true
+  validates :problems, presence: true
+  validates :js, presence: true
+  validates :html, presence: true
+  validates :css, presence: true
+  validates :teamwork, presence: true
+  validates :motivation, presence: true
+  validates :communication, presence: true
+  validates :energy, presence: true
+  validates :intelligence, presence: true
 end
