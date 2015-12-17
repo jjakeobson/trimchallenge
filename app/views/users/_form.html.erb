@@ -1,93 +1,231 @@
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<div class="row">
+  <div class="col-md-8 col-md-offset-2 col-sm-12">
+    <div id="form-container">
+      <%= form_for(@user) do |f| %>
+        <% if @user.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@user.errors.count, "ERROR") %> PREVENTED THE FORM FORM SUBMITTING:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+            <ul>
+            <% @user.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
+
+        <div class="form-group">
+          <%= f.text_field :name, class: "form-control", placeholder: "FULL NAME" %>
+        </div>
+        <div class="form-group">
+          <%= f.email_field :email, class: "form-control", placeholder: "EMAIL" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :projectrepo, class: "form-control", placeholder: "PROJECT REPO" %>
+        </div>
+        <div class="form-group">
+          <%= f.text_field :projecturl, class: "form-control", placeholder: "PROJECT URL" %>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :oopprac, "USING BEST PRACTICES FOR OOP:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :oopprac, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :moddev, "MODULAR DEVELOPMENT:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :moddev, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :fullstack, "FULL STACK WORKFLOW UNDERSTANDING:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :fullstack, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :testing, "TESTING:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :testing, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :dbknow, "DATABASE KNOWLEDGE:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :dbknow, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :debug, "DEBUGGING:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :debug, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :problems, "PROBLEM SOLVING SKILLS:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :problems, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :js, "JAVASCRIPT:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :js, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :html, "HTML:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :html, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :css, "CSS:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :css, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :teamwork, "WORKING ON A TEAM:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :teamwork, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :motivation, "SELF MOTIVATION:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :motivation, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :communication, "COMMUNICATION SKILLS:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :communication, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :energy, "YOUR OWN ENERGY LEVEL:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :energy, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-10 col-sm-10">
+            <div class="form-label">
+              <%= f.label :intelligence, "INTELLIGENCE:" %>
+            </div>
+          </div>
+          <div class="col-md-2 col-sm-2">
+            <div class="form-group">
+              <%= f.number_field :intelligence, class: "form-control", min: 0, max: 50 %>
+            </div>
+          </div>
+        </div>
+
+        <div class="actions">
+          <%= f.submit class: "btn btn-primary", id: "submit-button", value: "SUBMIT"%>
+        </div>
       <% end %>
-      </ul>
     </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
   </div>
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :projectrepo %><br>
-    <%= f.text_field :projectrepo %>
-  </div>
-  <div class="field">
-    <%= f.label :projecturl %><br>
-    <%= f.text_field :projecturl %>
-  </div>
-  <div class="field">
-    <%= f.label :oopprac %><br>
-    <%= f.number_field :oopprac %>
-  </div>
-  <div class="field">
-    <%= f.label :moddev %><br>
-    <%= f.number_field :moddev %>
-  </div>
-  <div class="field">
-    <%= f.label :fullstack %><br>
-    <%= f.number_field :fullstack %>
-  </div>
-  <div class="field">
-    <%= f.label :testing %><br>
-    <%= f.number_field :testing %>
-  </div>
-  <div class="field">
-    <%= f.label :dbknow %><br>
-    <%= f.number_field :dbknow %>
-  </div>
-  <div class="field">
-    <%= f.label :debug %><br>
-    <%= f.number_field :debug %>
-  </div>
-  <div class="field">
-    <%= f.label :problems %><br>
-    <%= f.number_field :problems %>
-  </div>
-  <div class="field">
-    <%= f.label :js %><br>
-    <%= f.number_field :js %>
-  </div>
-  <div class="field">
-    <%= f.label :html %><br>
-    <%= f.number_field :html %>
-  </div>
-  <div class="field">
-    <%= f.label :css %><br>
-    <%= f.number_field :css %>
-  </div>
-  <div class="field">
-    <%= f.label :teamwork %><br>
-    <%= f.number_field :teamwork %>
-  </div>
-  <div class="field">
-    <%= f.label :motivation %><br>
-    <%= f.number_field :motivation %>
-  </div>
-  <div class="field">
-    <%= f.label :communication %><br>
-    <%= f.number_field :communication %>
-  </div>
-  <div class="field">
-    <%= f.label :energy %><br>
-    <%= f.number_field :energy %>
-  </div>
-  <div class="field">
-    <%= f.label :intelligence %><br>
-    <%= f.number_field :intelligence %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>

@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       if @user.save
 
         # Sends email to user when user is created.
-        ContactMailer.send_email(@user).deliver
+        ContactMailer.send_email(@user).deliver_now
 
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
