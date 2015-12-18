@@ -1,4 +1,6 @@
 <div class="container">
+  <%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>
+
 
   <% if notice %>
     <div class="row">
@@ -228,5 +230,13 @@
       </div>
     </div>
   </div>
+  <%= column_chart({"OOP" => @user.oopprac, "Modular Development" => @user.moddev,
+    "Full Stack Workflow" => @user.fullstack, "Testing" => @user.testing,
+    "Database Knowledge" => @user.dbknow, "Debugging" => @user.debug,
+    "Problem Solving" => @user.problems, "JavaScript" => @user.js,
+    "HTML" => @user.html, "CSS" => @user.css, "Teamwork" => @user.teamwork,
+    "Self Motivation" => @user.motivation, "Communication" => @user.communication,
+    "Energy-Level" => @user.energy, "Intelligence" => @user.intelligence}, stacked: true, height: "500px") %>
+
 
 </div>
