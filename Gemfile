@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'chartkick'
+
 gem 'figaro'
 
 gem 'bootstrap-sass'
